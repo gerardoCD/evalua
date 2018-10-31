@@ -10,12 +10,17 @@
 		09E2DEEDCBB75383F6D9C1F2 /* Pods_evalua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB8B1AE94C93C433CB6AC22 /* Pods_evalua.framework */; };
 		3080F67621894DA90002C44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67521894DA90002C44B /* AppDelegate.swift */; };
 		3080F67821894DA90002C44B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67721894DA90002C44B /* MasterViewController.swift */; };
-		3080F67A21894DA90002C44B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67921894DA90002C44B /* DetailViewController.swift */; };
 		3080F67D21894DA90002C44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F67B21894DA90002C44B /* Main.storyboard */; };
 		3080F67F21894DAA0002C44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3080F67E21894DAA0002C44B /* Assets.xcassets */; };
 		3080F68221894DAA0002C44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F68021894DAA0002C44B /* LaunchScreen.storyboard */; };
 		3080F68D21894DAB0002C44B /* evaluaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F68C21894DAB0002C44B /* evaluaTests.swift */; };
 		3080F69821894DAB0002C44B /* evaluaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F69721894DAB0002C44B /* evaluaUITests.swift */; };
+		30EFED412189575500C9EFC5 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED402189575500C9EFC5 /* TeamTableViewController.swift */; };
+		30EFED492189593100C9EFC5 /* Klass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED482189593100C9EFC5 /* Klass.swift */; };
+		30EFED4B21895B4400C9EFC5 /* Evaluable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED4A21895B4400C9EFC5 /* Evaluable.swift */; };
+		30EFED4D21895B9400C9EFC5 /* Rubric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED4C21895B9400C9EFC5 /* Rubric.swift */; };
+		30EFED4F21895BD800C9EFC5 /* RubricScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED4E21895BD800C9EFC5 /* RubricScore.swift */; };
+		30EFED5121895C9B00C9EFC5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED5021895C9B00C9EFC5 /* Team.swift */; };
 		4821BD96836A0177889C69A6 /* Pods_evaluaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929CFB64913EB56B3291E4D2 /* Pods_evaluaUITests.framework */; };
 		D88492B053B729B8D34FFFD8 /* Pods_evaluaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1C74DF93058553F6F3374E /* Pods_evaluaTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +46,6 @@
 		3080F67221894DA90002C44B /* evalua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evalua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3080F67521894DA90002C44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3080F67721894DA90002C44B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		3080F67921894DA90002C44B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3080F67C21894DA90002C44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3080F67E21894DAA0002C44B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3080F68121894DAA0002C44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,12 @@
 		3080F69321894DAB0002C44B /* evaluaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evaluaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3080F69721894DAB0002C44B /* evaluaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evaluaUITests.swift; sourceTree = "<group>"; };
 		3080F69921894DAB0002C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EFED402189575500C9EFC5 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		30EFED482189593100C9EFC5 /* Klass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klass.swift; sourceTree = "<group>"; };
+		30EFED4A21895B4400C9EFC5 /* Evaluable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluable.swift; sourceTree = "<group>"; };
+		30EFED4C21895B9400C9EFC5 /* Rubric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubric.swift; sourceTree = "<group>"; };
+		30EFED4E21895BD800C9EFC5 /* RubricScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubricScore.swift; sourceTree = "<group>"; };
+		30EFED5021895C9B00C9EFC5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		8635717D4FAB0B48FBF42EB7 /* Pods-evaluaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evaluaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-evaluaUITests/Pods-evaluaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		929CFB64913EB56B3291E4D2 /* Pods_evaluaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evaluaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C05FFAF79E26E5FC3F69B0 /* Pods-evaluaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evaluaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-evaluaTests/Pods-evaluaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,9 +139,9 @@
 		3080F67421894DA90002C44B /* evalua */ = {
 			isa = PBXGroup;
 			children = (
+				30EFED43218958BD00C9EFC5 /* models */,
+				30EFED422189575D00C9EFC5 /* controllers */,
 				3080F67521894DA90002C44B /* AppDelegate.swift */,
-				3080F67721894DA90002C44B /* MasterViewController.swift */,
-				3080F67921894DA90002C44B /* DetailViewController.swift */,
 				3080F67B21894DA90002C44B /* Main.storyboard */,
 				3080F67E21894DAA0002C44B /* Assets.xcassets */,
 				3080F68021894DAA0002C44B /* LaunchScreen.storyboard */,
@@ -156,6 +166,27 @@
 				3080F69921894DAB0002C44B /* Info.plist */,
 			);
 			path = evaluaUITests;
+			sourceTree = "<group>";
+		};
+		30EFED422189575D00C9EFC5 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3080F67721894DA90002C44B /* MasterViewController.swift */,
+				30EFED402189575500C9EFC5 /* TeamTableViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		30EFED43218958BD00C9EFC5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				30EFED4A21895B4400C9EFC5 /* Evaluable.swift */,
+				30EFED482189593100C9EFC5 /* Klass.swift */,
+				30EFED4C21895B9400C9EFC5 /* Rubric.swift */,
+				30EFED4E21895BD800C9EFC5 /* RubricScore.swift */,
+				30EFED5021895C9B00C9EFC5 /* Team.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		785584E6D1C686B31AB7D398 /* Frameworks */ = {
@@ -394,9 +425,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3080F67A21894DA90002C44B /* DetailViewController.swift in Sources */,
 				3080F67821894DA90002C44B /* MasterViewController.swift in Sources */,
+				30EFED4B21895B4400C9EFC5 /* Evaluable.swift in Sources */,
 				3080F67621894DA90002C44B /* AppDelegate.swift in Sources */,
+				30EFED412189575500C9EFC5 /* TeamTableViewController.swift in Sources */,
+				30EFED5121895C9B00C9EFC5 /* Team.swift in Sources */,
+				30EFED492189593100C9EFC5 /* Klass.swift in Sources */,
+				30EFED4D21895B9400C9EFC5 /* Rubric.swift in Sources */,
+				30EFED4F21895BD800C9EFC5 /* RubricScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

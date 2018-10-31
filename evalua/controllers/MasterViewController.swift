@@ -9,10 +9,8 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: TeamTableViewController!
     var objects = [Any]()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +21,7 @@ class MasterViewController: UITableViewController {
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? TeamTableViewController
         }
     }
 
@@ -45,8 +43,7 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                let controller = (segue.destination as! UINavigationController).topViewController as! TeamTableViewController
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -85,6 +82,4 @@ class MasterViewController: UITableViewController {
         }
     }
 
-
 }
-
