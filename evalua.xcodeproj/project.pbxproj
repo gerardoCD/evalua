@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09E2DEEDCBB75383F6D9C1F2 /* Pods_evalua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB8B1AE94C93C433CB6AC22 /* Pods_evalua.framework */; };
+		3080F67621894DA90002C44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67521894DA90002C44B /* AppDelegate.swift */; };
+		3080F67821894DA90002C44B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67721894DA90002C44B /* MasterViewController.swift */; };
+		3080F67A21894DA90002C44B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67921894DA90002C44B /* DetailViewController.swift */; };
+		3080F67D21894DA90002C44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F67B21894DA90002C44B /* Main.storyboard */; };
+		3080F67F21894DAA0002C44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3080F67E21894DAA0002C44B /* Assets.xcassets */; };
+		3080F68221894DAA0002C44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F68021894DAA0002C44B /* LaunchScreen.storyboard */; };
+		3080F68D21894DAB0002C44B /* evaluaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F68C21894DAB0002C44B /* evaluaTests.swift */; };
+		3080F69821894DAB0002C44B /* evaluaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F69721894DAB0002C44B /* evaluaUITests.swift */; };
+		4821BD96836A0177889C69A6 /* Pods_evaluaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929CFB64913EB56B3291E4D2 /* Pods_evaluaUITests.framework */; };
+		D88492B053B729B8D34FFFD8 /* Pods_evaluaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1C74DF93058553F6F3374E /* Pods_evaluaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3080F68921894DAB0002C44B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3080F66A21894DA90002C44B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3080F67121894DA90002C44B;
+			remoteInfo = evalua;
+		};
+		3080F69421894DAB0002C44B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3080F66A21894DA90002C44B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3080F67121894DA90002C44B;
+			remoteInfo = evalua;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3080F67221894DA90002C44B /* evalua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evalua.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3080F67521894DA90002C44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3080F67721894DA90002C44B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		3080F67921894DA90002C44B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3080F67C21894DA90002C44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3080F67E21894DAA0002C44B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3080F68121894DAA0002C44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3080F68321894DAA0002C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3080F68821894DAB0002C44B /* evaluaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evaluaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3080F68C21894DAB0002C44B /* evaluaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evaluaTests.swift; sourceTree = "<group>"; };
+		3080F68E21894DAB0002C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3080F69321894DAB0002C44B /* evaluaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evaluaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3080F69721894DAB0002C44B /* evaluaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evaluaUITests.swift; sourceTree = "<group>"; };
+		3080F69921894DAB0002C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8635717D4FAB0B48FBF42EB7 /* Pods-evaluaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evaluaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-evaluaUITests/Pods-evaluaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		929CFB64913EB56B3291E4D2 /* Pods_evaluaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evaluaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C05FFAF79E26E5FC3F69B0 /* Pods-evaluaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evaluaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-evaluaTests/Pods-evaluaTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CB8B1AE94C93C433CB6AC22 /* Pods_evalua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evalua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3ECD4B28A86EEB1A237A3B /* Pods-evaluaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evaluaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evaluaTests/Pods-evaluaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB1C74DF93058553F6F3374E /* Pods_evaluaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evaluaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B34E36B0DFC8FEBFD4AB2E /* Pods-evalua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evalua.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evalua/Pods-evalua.debug.xcconfig"; sourceTree = "<group>"; };
+		F807B560CED728F6E74B1635 /* Pods-evaluaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evaluaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evaluaUITests/Pods-evaluaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF4B467E7ECFF67D459C6A71 /* Pods-evalua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evalua.release.xcconfig"; path = "Pods/Target Support Files/Pods-evalua/Pods-evalua.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3080F66F21894DA90002C44B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E2DEEDCBB75383F6D9C1F2 /* Pods_evalua.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3080F68521894DAB0002C44B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88492B053B729B8D34FFFD8 /* Pods_evaluaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3080F69021894DAB0002C44B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4821BD96836A0177889C69A6 /* Pods_evaluaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ABB56510ED12D53A70E58E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8B34E36B0DFC8FEBFD4AB2E /* Pods-evalua.debug.xcconfig */,
+				FF4B467E7ECFF67D459C6A71 /* Pods-evalua.release.xcconfig */,
+				9E3ECD4B28A86EEB1A237A3B /* Pods-evaluaTests.debug.xcconfig */,
+				94C05FFAF79E26E5FC3F69B0 /* Pods-evaluaTests.release.xcconfig */,
+				F807B560CED728F6E74B1635 /* Pods-evaluaUITests.debug.xcconfig */,
+				8635717D4FAB0B48FBF42EB7 /* Pods-evaluaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3080F66921894DA90002C44B = {
+			isa = PBXGroup;
+			children = (
+				3080F67421894DA90002C44B /* evalua */,
+				3080F68B21894DAB0002C44B /* evaluaTests */,
+				3080F69621894DAB0002C44B /* evaluaUITests */,
+				3080F67321894DA90002C44B /* Products */,
+				1ABB56510ED12D53A70E58E0 /* Pods */,
+				785584E6D1C686B31AB7D398 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3080F67321894DA90002C44B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3080F67221894DA90002C44B /* evalua.app */,
+				3080F68821894DAB0002C44B /* evaluaTests.xctest */,
+				3080F69321894DAB0002C44B /* evaluaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3080F67421894DA90002C44B /* evalua */ = {
+			isa = PBXGroup;
+			children = (
+				3080F67521894DA90002C44B /* AppDelegate.swift */,
+				3080F67721894DA90002C44B /* MasterViewController.swift */,
+				3080F67921894DA90002C44B /* DetailViewController.swift */,
+				3080F67B21894DA90002C44B /* Main.storyboard */,
+				3080F67E21894DAA0002C44B /* Assets.xcassets */,
+				3080F68021894DAA0002C44B /* LaunchScreen.storyboard */,
+				3080F68321894DAA0002C44B /* Info.plist */,
+			);
+			path = evalua;
+			sourceTree = "<group>";
+		};
+		3080F68B21894DAB0002C44B /* evaluaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3080F68C21894DAB0002C44B /* evaluaTests.swift */,
+				3080F68E21894DAB0002C44B /* Info.plist */,
+			);
+			path = evaluaTests;
+			sourceTree = "<group>";
+		};
+		3080F69621894DAB0002C44B /* evaluaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3080F69721894DAB0002C44B /* evaluaUITests.swift */,
+				3080F69921894DAB0002C44B /* Info.plist */,
+			);
+			path = evaluaUITests;
+			sourceTree = "<group>";
+		};
+		785584E6D1C686B31AB7D398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CB8B1AE94C93C433CB6AC22 /* Pods_evalua.framework */,
+				CB1C74DF93058553F6F3374E /* Pods_evaluaTests.framework */,
+				929CFB64913EB56B3291E4D2 /* Pods_evaluaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3080F67121894DA90002C44B /* evalua */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3080F69C21894DAB0002C44B /* Build configuration list for PBXNativeTarget "evalua" */;
+			buildPhases = (
+				86B1C959F7D47390A2ED6FDE /* [CP] Check Pods Manifest.lock */,
+				3080F66E21894DA90002C44B /* Sources */,
+				3080F66F21894DA90002C44B /* Frameworks */,
+				3080F67021894DA90002C44B /* Resources */,
+				C2A90B088F4FCDC04E3AEE4D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = evalua;
+			productName = evalua;
+			productReference = 3080F67221894DA90002C44B /* evalua.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3080F68721894DAB0002C44B /* evaluaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3080F69F21894DAB0002C44B /* Build configuration list for PBXNativeTarget "evaluaTests" */;
+			buildPhases = (
+				B43EFA3A70B967E5D066216C /* [CP] Check Pods Manifest.lock */,
+				3080F68421894DAB0002C44B /* Sources */,
+				3080F68521894DAB0002C44B /* Frameworks */,
+				3080F68621894DAB0002C44B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3080F68A21894DAB0002C44B /* PBXTargetDependency */,
+			);
+			name = evaluaTests;
+			productName = evaluaTests;
+			productReference = 3080F68821894DAB0002C44B /* evaluaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3080F69221894DAB0002C44B /* evaluaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3080F6A221894DAB0002C44B /* Build configuration list for PBXNativeTarget "evaluaUITests" */;
+			buildPhases = (
+				5C809F1858DFFEAB64F2D108 /* [CP] Check Pods Manifest.lock */,
+				3080F68F21894DAB0002C44B /* Sources */,
+				3080F69021894DAB0002C44B /* Frameworks */,
+				3080F69121894DAB0002C44B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3080F69521894DAB0002C44B /* PBXTargetDependency */,
+			);
+			name = evaluaUITests;
+			productName = evaluaUITests;
+			productReference = 3080F69321894DAB0002C44B /* evaluaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3080F66A21894DA90002C44B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "iOSLab FI-UNAM";
+				TargetAttributes = {
+					3080F67121894DA90002C44B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					3080F68721894DAB0002C44B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 3080F67121894DA90002C44B;
+					};
+					3080F69221894DAB0002C44B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 3080F67121894DA90002C44B;
+					};
+				};
+			};
+			buildConfigurationList = 3080F66D21894DA90002C44B /* Build configuration list for PBXProject "evalua" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3080F66921894DA90002C44B;
+			productRefGroup = 3080F67321894DA90002C44B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3080F67121894DA90002C44B /* evalua */,
+				3080F68721894DAB0002C44B /* evaluaTests */,
+				3080F69221894DAB0002C44B /* evaluaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3080F67021894DA90002C44B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3080F68221894DAA0002C44B /* LaunchScreen.storyboard in Resources */,
+				3080F67F21894DAA0002C44B /* Assets.xcassets in Resources */,
+				3080F67D21894DA90002C44B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3080F68621894DAB0002C44B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3080F69121894DAB0002C44B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C809F1858DFFEAB64F2D108 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-evaluaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86B1C959F7D47390A2ED6FDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-evalua-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43EFA3A70B967E5D066216C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-evaluaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A90B088F4FCDC04E3AEE4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-evalua/Pods-evalua-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evalua/Pods-evalua-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3080F66E21894DA90002C44B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3080F67A21894DA90002C44B /* DetailViewController.swift in Sources */,
+				3080F67821894DA90002C44B /* MasterViewController.swift in Sources */,
+				3080F67621894DA90002C44B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3080F68421894DAB0002C44B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3080F68D21894DAB0002C44B /* evaluaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3080F68F21894DAB0002C44B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3080F69821894DAB0002C44B /* evaluaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3080F68A21894DAB0002C44B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3080F67121894DA90002C44B /* evalua */;
+			targetProxy = 3080F68921894DAB0002C44B /* PBXContainerItemProxy */;
+		};
+		3080F69521894DAB0002C44B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3080F67121894DA90002C44B /* evalua */;
+			targetProxy = 3080F69421894DAB0002C44B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3080F67B21894DA90002C44B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3080F67C21894DA90002C44B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3080F68021894DAA0002C44B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3080F68121894DAA0002C44B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3080F69A21894DAB0002C44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3080F69B21894DAB0002C44B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3080F69D21894DAB0002C44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B34E36B0DFC8FEBFD4AB2E /* Pods-evalua.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				INFOPLIST_FILE = evalua/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.ingenieria.ioslab.evalua;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3080F69E21894DAB0002C44B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF4B467E7ECFF67D459C6A71 /* Pods-evalua.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				INFOPLIST_FILE = evalua/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.ingenieria.ioslab.evalua;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3080F6A021894DAB0002C44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3ECD4B28A86EEB1A237A3B /* Pods-evaluaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				INFOPLIST_FILE = evaluaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.ingenieria.ioslab.evaluaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evalua.app/evalua";
+			};
+			name = Debug;
+		};
+		3080F6A121894DAB0002C44B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94C05FFAF79E26E5FC3F69B0 /* Pods-evaluaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				INFOPLIST_FILE = evaluaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.ingenieria.ioslab.evaluaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evalua.app/evalua";
+			};
+			name = Release;
+		};
+		3080F6A321894DAB0002C44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F807B560CED728F6E74B1635 /* Pods-evaluaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				INFOPLIST_FILE = evaluaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.ingenieria.ioslab.evaluaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = evalua;
+			};
+			name = Debug;
+		};
+		3080F6A421894DAB0002C44B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8635717D4FAB0B48FBF42EB7 /* Pods-evaluaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				INFOPLIST_FILE = evaluaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.ingenieria.ioslab.evaluaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = evalua;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3080F66D21894DA90002C44B /* Build configuration list for PBXProject "evalua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3080F69A21894DAB0002C44B /* Debug */,
+				3080F69B21894DAB0002C44B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3080F69C21894DAB0002C44B /* Build configuration list for PBXNativeTarget "evalua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3080F69D21894DAB0002C44B /* Debug */,
+				3080F69E21894DAB0002C44B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3080F69F21894DAB0002C44B /* Build configuration list for PBXNativeTarget "evaluaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3080F6A021894DAB0002C44B /* Debug */,
+				3080F6A121894DAB0002C44B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3080F6A221894DAB0002C44B /* Build configuration list for PBXNativeTarget "evaluaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3080F6A321894DAB0002C44B /* Debug */,
+				3080F6A421894DAB0002C44B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3080F66A21894DA90002C44B /* Project object */;
+}
