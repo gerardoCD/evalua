@@ -47,7 +47,6 @@ class TeamTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return teams.count
     }
 
@@ -56,7 +55,10 @@ class TeamTableViewController: UITableViewController {
 
         let team = teams[indexPath.row]
         cell.textLabel?.text = team.name
-
+        cell.detailTextLabel?.text = team.github
+        team.githubImage { img in
+            cell.imageView?.image = img
+        }
         return cell
     }
 
@@ -104,6 +106,11 @@ class TeamTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(72.0)
+    }
+
     @objc func onTapAdd(_ sender: Any) {
         let viewController = TeamFormViewController()
         self.navigationController?.pushViewController(viewController, animated: false)

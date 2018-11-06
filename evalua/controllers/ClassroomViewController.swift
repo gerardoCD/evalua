@@ -87,6 +87,10 @@ class ClassroomViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(72.0)
+    }
+
     @objc func didCreatedClassroom(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
         let info = userInfo as! [String: String]
