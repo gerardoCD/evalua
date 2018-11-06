@@ -1,5 +1,5 @@
 //
-//  Klass.swift
+//  Classroom.swift
 //  evalua
 //
 //  Created by Luis Ezcurdia on 10/30/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Klass {
+struct Classroom {
     let name: String
     var teams: [Team]
 }

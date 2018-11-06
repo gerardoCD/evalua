@@ -1,16 +1,20 @@
 PODS:
+  - Eureka (4.3.0)
   - IQKeyboardManagerSwift (6.1.1)
 
 DEPENDENCIES:
+  - Eureka
   - IQKeyboardManagerSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Eureka
     - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
+  Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
 
-PODFILE CHECKSUM: b895600a923eb30a9c3a44640ef8229538b29d9c
+PODFILE CHECKSUM: 97cab49b0b46238e958e85585ffab15ba33c54ba
 
 COCOAPODS: 1.5.3

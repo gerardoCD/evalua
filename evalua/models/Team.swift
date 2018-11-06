@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct Team {
+struct Team: Evaluable {
     let name: String
-    let githubUrlString: String
-    let repoUrlString: String
+    let github: String
+    let repo: String
+
+    // MARK: - Evaluable protocol methods
+    var scores: [RubricScore]
+    func eval() -> Float {
+        return 5.0
+    }
 }

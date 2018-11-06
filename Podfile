@@ -3,6 +3,7 @@ platform :ios, '11.0'
 target 'evalua' do
   use_frameworks!
 
+  pod 'Eureka'
   pod 'IQKeyboardManagerSwift'
   target 'evaluaTests' do
     inherit! :search_paths

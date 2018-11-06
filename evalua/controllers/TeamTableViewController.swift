@@ -9,39 +9,56 @@
 import UIKit
 
 class TeamTableViewController: UITableViewController {
-    var teams = [Team]()
+    var classroom: Classroom?
+    var teams: [Team] = [Team]()
+    lazy var addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAdd(_:)))
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didAddTeam(_:)),
+                                               name: NotificationKeys.team(create: true).name,
+                                               object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        navigationItem.rightBarButtonItem = addButton
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let classroomName = classroom?.name {
+            title = "\(classroomName) Teams"
+            addButton.isEnabled = true
+        } else {
+            title = "Teams"
+            addButton.isEnabled = false
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.classroom?.teams = self.teams
+        super.viewWillDisappear(animated)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return teams.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath)
 
-        // Configure the cell...
+        let team = teams[indexPath.row]
+        cell.textLabel?.text = team.name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,5 +104,20 @@ class TeamTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @objc func onTapAdd(_ sender: Any) {
+        let viewController = TeamFormViewController()
+        self.navigationController?.pushViewController(viewController, animated: false)
+    }
 
+    @objc func didAddTeam(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let info = userInfo as! [String: String]
+        guard let name = info["name"] else { return }
+        guard let github = info["github"] else { return }
+        guard let repo = info["repo"] else { return }
+        let team = Team(name: name, github: github, repo: repo, scores: [RubricScore]())
+        self.teams.insert(team, at: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
 }
