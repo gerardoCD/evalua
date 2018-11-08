@@ -10,7 +10,6 @@ import UIKit
 
 class ClassroomViewController: UITableViewController {
     var detailViewController: TeamTableViewController!
-    var classrooms = [Classroom]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +47,7 @@ class ClassroomViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let classroom = classrooms[indexPath.row]
+                let classroom = PersistenceManager.shared.classrooms[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! TeamTableViewController
                 controller.classroom = classroom
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -63,13 +62,13 @@ class ClassroomViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classrooms.count
+        return PersistenceManager.shared.classrooms.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "classroomCell", for: indexPath)
 
-        let classroom = classrooms[indexPath.row]
+        let classroom = PersistenceManager.shared.classrooms[indexPath.row]
         cell.textLabel?.text = classroom.name
         return cell
     }
@@ -80,7 +79,7 @@ class ClassroomViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            classrooms.remove(at: indexPath.row)
+            PersistenceManager.shared.classrooms.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -96,7 +95,7 @@ class ClassroomViewController: UITableViewController {
         let info = userInfo as! [String: String]
         guard let name = info["name"] else { return }
         let classroom = Classroom(name: name, teams: [Team]())
-        self.classrooms.insert(classroom, at: 0)
+        PersistenceManager.shared.classrooms.insert(classroom, at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }

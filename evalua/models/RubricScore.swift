@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RubricScore {
+struct RubricScore: Codable {
     let rubric: Rubric
     let score: Float
 }

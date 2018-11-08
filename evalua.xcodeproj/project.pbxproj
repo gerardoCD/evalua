@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		09E2DEEDCBB75383F6D9C1F2 /* Pods_evalua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB8B1AE94C93C433CB6AC22 /* Pods_evalua.framework */; };
 		302C802E218B9FE700AE73F9 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C802D218B9FE700AE73F9 /* NotificationKeys.swift */; };
+		304689EB2193D0EB00E0CE83 /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304689EA2193D0EB00E0CE83 /* StorageType.swift */; };
+		304689ED2193D1F100E0CE83 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304689EC2193D1F100E0CE83 /* ImageStore.swift */; };
+		304689EF2193D7F000E0CE83 /* CodableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304689EE2193D7F000E0CE83 /* CodableStore.swift */; };
+		304689F12193DE8C00E0CE83 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304689F02193DE8C00E0CE83 /* PersistenceManager.swift */; };
 		3080F67621894DA90002C44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67521894DA90002C44B /* AppDelegate.swift */; };
 		3080F67821894DA90002C44B /* ClassroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67721894DA90002C44B /* ClassroomViewController.swift */; };
 		3080F67D21894DA90002C44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F67B21894DA90002C44B /* Main.storyboard */; };
@@ -48,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		302C802D218B9FE700AE73F9 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
+		304689EA2193D0EB00E0CE83 /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		304689EC2193D1F100E0CE83 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		304689EE2193D7F000E0CE83 /* CodableStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStore.swift; sourceTree = "<group>"; };
+		304689F02193DE8C00E0CE83 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		3080F67221894DA90002C44B /* evalua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evalua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3080F67521894DA90002C44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3080F67721894DA90002C44B /* ClassroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +130,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		304689E92193D0A700E0CE83 /* stores */ = {
+			isa = PBXGroup;
+			children = (
+				304689EA2193D0EB00E0CE83 /* StorageType.swift */,
+				304689EC2193D1F100E0CE83 /* ImageStore.swift */,
+				304689EE2193D7F000E0CE83 /* CodableStore.swift */,
+			);
+			path = stores;
+			sourceTree = "<group>";
+		};
 		3080F66921894DA90002C44B = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +165,7 @@
 		3080F67421894DA90002C44B /* evalua */ = {
 			isa = PBXGroup;
 			children = (
+				304689E92193D0A700E0CE83 /* stores */,
 				30EFED43218958BD00C9EFC5 /* models */,
 				30EFED422189575D00C9EFC5 /* controllers */,
 				3080F67521894DA90002C44B /* AppDelegate.swift */,
@@ -155,6 +174,7 @@
 				3080F68021894DAA0002C44B /* LaunchScreen.storyboard */,
 				3080F68321894DAA0002C44B /* Info.plist */,
 				302C802D218B9FE700AE73F9 /* NotificationKeys.swift */,
+				304689F02193DE8C00E0CE83 /* PersistenceManager.swift */,
 			);
 			path = evalua;
 			sourceTree = "<group>";
@@ -442,14 +462,18 @@
 				3080F67821894DA90002C44B /* ClassroomViewController.swift in Sources */,
 				3094D84E2192272000A2B853 /* EvaluationSplitViewController.swift in Sources */,
 				30EFED4B21895B4400C9EFC5 /* Evaluable.swift in Sources */,
+				304689F12193DE8C00E0CE83 /* PersistenceManager.swift in Sources */,
 				30D94AC5218BDB240063B3EE /* ClassroomFormViewController.swift in Sources */,
 				3080F67621894DA90002C44B /* AppDelegate.swift in Sources */,
 				30EFED412189575500C9EFC5 /* TeamTableViewController.swift in Sources */,
 				30D94AC3218BD53A0063B3EE /* TeamFormViewController.swift in Sources */,
+				304689EF2193D7F000E0CE83 /* CodableStore.swift in Sources */,
 				30EFED5121895C9B00C9EFC5 /* Team.swift in Sources */,
 				30EFED492189593100C9EFC5 /* Classroom.swift in Sources */,
 				302C802E218B9FE700AE73F9 /* NotificationKeys.swift in Sources */,
 				30EFED4D21895B9400C9EFC5 /* Rubric.swift in Sources */,
+				304689EB2193D0EB00E0CE83 /* StorageType.swift in Sources */,
+				304689ED2193D1F100E0CE83 /* ImageStore.swift in Sources */,
 				30EFED4F21895BD800C9EFC5 /* RubricScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

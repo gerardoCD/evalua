@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Rubric {
+struct Rubric: Codable {
     let name: String
     let weight: Float
 }

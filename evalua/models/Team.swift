@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Team: Evaluable {
+struct Team: Codable, Evaluable {
     let name: String
     let github: String
     let repo: String
@@ -19,7 +19,7 @@ struct Team: Evaluable {
     func eval() -> Float {
         return 5.0
     }
-    
+
     func githubImage(_ completion: @escaping (UIImage) -> Void) {
         DispatchQueue.global(qos: .background).async {
             guard let url = URL(string: "https://github.com/\(self.github).png"),

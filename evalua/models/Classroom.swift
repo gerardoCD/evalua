@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Classroom {
+struct Classroom: Codable {
     let name: String
     var teams: [Team]
 }
