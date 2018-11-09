@@ -10,7 +10,6 @@ import UIKit
 import Eureka
 
 class TeamFormViewController: FormViewController {
-
     let nameRow: TextRow = {
         let row = TextRow()
         row.title = "Name"
@@ -76,12 +75,13 @@ class TeamFormViewController: FormViewController {
         guard let name = self.nameRow.value, !name.isEmpty else { return }
         guard let github = self.githubRow.value, !github.isEmpty else { return }
         guard let repo = self.repoRow.value, !repo.isEmpty else { return }
-        let info = ["name": name, "github": github, "repo": repo]
+        let team = Team(name: name, github: github, repo: repo, scores: [RubricScore]())
+        let info = ["team": team]
         let notificationName = NotificationKeys.team(create: true).name
         NotificationCenter.default.post(name: notificationName, object: nil, userInfo: info as [AnyHashable: Any])
         self.navigationController?.popViewController(animated: false)
     }
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -89,6 +89,4 @@ class TeamFormViewController: FormViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-
 }

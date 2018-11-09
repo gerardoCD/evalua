@@ -10,7 +10,6 @@ import UIKit
 import Eureka
 
 class ClassroomFormViewController: FormViewController {
-
     let nameRow: TextRow = {
         let row = TextRow()
         row.title = "Name"
@@ -43,7 +42,8 @@ class ClassroomFormViewController: FormViewController {
     func createClassroom() {
         guard nameRow.isValid else { return }
         guard let name = self.nameRow.value, !name.isEmpty else { return }
-        let info = ["name": name]
+        let classroom = Classroom(name: name)
+        let info = ["classroom": classroom]
         let notificationName = NotificationKeys.classroom(create: true).name
         NotificationCenter.default.post(name: notificationName, object: nil, userInfo: info as [AnyHashable: Any])
         self.navigationController?.popViewController(animated: false)

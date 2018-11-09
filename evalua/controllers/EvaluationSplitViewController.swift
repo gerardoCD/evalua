@@ -9,6 +9,7 @@
 import UIKit
 
 class EvaluationSplitViewController: UISplitViewController {
+    var classrooms = ClassroomStorage()
 
     override func viewDidLoad() {
         super.viewDidLoad()

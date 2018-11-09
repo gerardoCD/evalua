@@ -14,6 +14,18 @@ struct Team: Codable, Evaluable {
     let github: String
     let repo: String
 
+    var githubUrlString: String {
+        return "https://github.com/\(self.github)"
+    }
+
+    var repoUrlString: String {
+        return "\(self.githubUrlString)/\(self.repo)"
+    }
+
+    var repoUrl: URL? {
+        return URL(string: repoUrlString)
+    }
+
     // MARK: - Evaluable protocol methods
     var scores: [RubricScore]
     func eval() -> Float {
@@ -22,7 +34,7 @@ struct Team: Codable, Evaluable {
 
     func githubImage(_ completion: @escaping (UIImage) -> Void) {
         DispatchQueue.global(qos: .background).async {
-            guard let url = URL(string: "https://github.com/\(self.github).png"),
+            guard let url = URL(string: "\(self.githubUrlString).png"),
                 let data = try? Data(contentsOf: url),
                 let img = UIImage(data: data) else { return }
             DispatchQueue.main.async {

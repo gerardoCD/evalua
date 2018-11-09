@@ -9,8 +9,9 @@
 import UIKit
 
 class TeamTableViewController: UITableViewController {
-    var classroom: Classroom?
-    var teams: [Team] = [Team]()
+    var classroomIndex: Int?
+    var classrooms: ClassroomStorage!
+
     lazy var addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAdd(_:)))
 
     override func viewDidLoad() {
@@ -22,12 +23,15 @@ class TeamTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         navigationItem.rightBarButtonItem = addButton
+        if let split = splitViewController as? EvaluationSplitViewController {
+            classrooms = split.classrooms
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let classroomName = classroom?.name {
-            title = "\(classroomName) Teams"
+        if let idx = classroomIndex {
+            title = classrooms[idx].name
             addButton.isEnabled = true
         } else {
             title = "Teams"
@@ -35,27 +39,23 @@ class TeamTableViewController: UITableViewController {
         }
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        self.classroom?.teams = self.teams
-        super.viewWillDisappear(animated)
-    }
-
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teams.count
+        guard let idx = classroomIndex else { return 0 }
+        return classrooms[idx].teams.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath)
 
-        let team = teams[indexPath.row]
+        guard let idx = classroomIndex else { return cell }
+        let team = classrooms[idx].teams[indexPath.row]
         cell.textLabel?.text = team.name
-        cell.detailTextLabel?.text = team.github
+        cell.detailTextLabel?.text = team.repo
         team.githubImage { img in
             cell.imageView?.image = img
         }
@@ -97,15 +97,19 @@ class TeamTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let controller = (segue.destination as! UINavigationController).topViewController as! TeamEvaluationViewController
+                controller.team = classrooms[classroomIndex!].teams[indexPath.row]
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
-    */
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(72.0)
@@ -117,13 +121,11 @@ class TeamTableViewController: UITableViewController {
     }
 
     @objc func didAddTeam(_ notification: Notification) {
+        guard let idx = classroomIndex else { return }
         guard let userInfo = notification.userInfo else { return }
-        let info = userInfo as! [String: String]
-        guard let name = info["name"] else { return }
-        guard let github = info["github"] else { return }
-        guard let repo = info["repo"] else { return }
-        let team = Team(name: name, github: github, repo: repo, scores: [RubricScore]())
-        self.teams.insert(team, at: 0)
+        let info = userInfo as! [String: Team]
+        guard let team = info["team"] else { return }
+        classrooms[idx].teams.insert(team, at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }

@@ -10,5 +10,11 @@ import Foundation
 
 struct Rubric: Codable {
     let name: String
-    let weight: Float
+    let weight: Float = 1.0
+}
+
+extension Rubric: Equatable {
+    static func == (lhs: Rubric, rhs: Rubric) -> Bool {
+        return lhs.name == rhs.name && lhs.weight == rhs.weight
+    }
 }

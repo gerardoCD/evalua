@@ -10,6 +10,7 @@ import UIKit
 
 class ClassroomViewController: UITableViewController {
     var detailViewController: TeamTableViewController!
+    var classrooms: ClassroomStorage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,11 @@ class ClassroomViewController: UITableViewController {
                                                object: nil)
         navigationItem.leftBarButtonItem = editButtonItem
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAdd(_:)))
         navigationItem.rightBarButtonItem = addButton
-//        if let split = splitViewController {
-//            let controllers = split.viewControllers
-//            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? TeamTableViewController
-//        }
+        if let split = splitViewController as? EvaluationSplitViewController {
+            classrooms = split.classrooms
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +37,12 @@ class ClassroomViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    @objc func insertNewObject(_ sender: Any) {
+    override func viewWillDisappear(_ animated: Bool) {
+        classrooms.save()
+        super.viewWillDisappear(animated)
+    }
+
+    @objc func onTapAdd(_ sender: Any) {
         let viewController = ClassroomFormViewController()
         self.navigationController?.pushViewController(viewController, animated: false)
     }
@@ -45,13 +50,10 @@ class ClassroomViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "showTeams" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let classroom = PersistenceManager.shared.classrooms[indexPath.row]
-                let controller = (segue.destination as! UINavigationController).topViewController as! TeamTableViewController
-                controller.classroom = classroom
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
+                let controller = segue.destination as! TeamTableViewController
+                controller.classroomIndex = indexPath.row
             }
         }
     }
@@ -62,13 +64,13 @@ class ClassroomViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PersistenceManager.shared.classrooms.count
+        return classrooms.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "classroomCell", for: indexPath)
 
-        let classroom = PersistenceManager.shared.classrooms[indexPath.row]
+        let classroom = classrooms[indexPath.row]
         cell.textLabel?.text = classroom.name
         return cell
     }
@@ -79,7 +81,7 @@ class ClassroomViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            PersistenceManager.shared.classrooms.remove(at: indexPath.row)
+            classrooms.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -92,10 +94,9 @@ class ClassroomViewController: UITableViewController {
 
     @objc func didCreatedClassroom(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
-        let info = userInfo as! [String: String]
-        guard let name = info["name"] else { return }
-        let classroom = Classroom(name: name, teams: [Team]())
-        PersistenceManager.shared.classrooms.insert(classroom, at: 0)
+        let info = userInfo as! [String: Classroom]
+        guard let classroom = info["classroom"] else { return }
+        classrooms[0] = classroom
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
