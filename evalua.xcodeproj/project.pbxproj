@@ -16,6 +16,8 @@
 		304689F52195142600E0CE83 /* RubricStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304689F42195142600E0CE83 /* RubricStorage.swift */; };
 		304689F72195332700E0CE83 /* ObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304689F62195332700E0CE83 /* ObjectStorage.swift */; };
 		30468A362195520400E0CE83 /* TeamEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30468A352195520400E0CE83 /* TeamEvaluationViewController.swift */; };
+		304D3E50219C028400B98E00 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304D3E4F219C028400B98E00 /* Settings.storyboard */; };
+		304D3E52219C037F00B98E00 /* Evaluation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304D3E51219C037F00B98E00 /* Evaluation.storyboard */; };
 		3080F67621894DA90002C44B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67521894DA90002C44B /* AppDelegate.swift */; };
 		3080F67821894DA90002C44B /* ClassroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F67721894DA90002C44B /* ClassroomViewController.swift */; };
 		3080F67D21894DA90002C44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F67B21894DA90002C44B /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		304689F42195142600E0CE83 /* RubricStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubricStorage.swift; sourceTree = "<group>"; };
 		304689F62195332700E0CE83 /* ObjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectStorage.swift; sourceTree = "<group>"; };
 		30468A352195520400E0CE83 /* TeamEvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEvaluationViewController.swift; sourceTree = "<group>"; };
+		304D3E4F219C028400B98E00 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		304D3E51219C037F00B98E00 /* Evaluation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Evaluation.storyboard; path = Base.lproj/Evaluation.storyboard; sourceTree = "<group>"; };
 		3080F67221894DA90002C44B /* evalua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evalua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3080F67521894DA90002C44B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3080F67721894DA90002C44B /* ClassroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				30EFED422189575D00C9EFC5 /* controllers */,
 				3080F67521894DA90002C44B /* AppDelegate.swift */,
 				3080F67B21894DA90002C44B /* Main.storyboard */,
+				304D3E51219C037F00B98E00 /* Evaluation.storyboard */,
+				304D3E4F219C028400B98E00 /* Settings.storyboard */,
 				3080F67E21894DAA0002C44B /* Assets.xcassets */,
 				3080F68021894DAA0002C44B /* LaunchScreen.storyboard */,
 				3080F68321894DAA0002C44B /* Info.plist */,
@@ -364,9 +370,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304D3E52219C037F00B98E00 /* Evaluation.storyboard in Resources */,
 				3080F68221894DAA0002C44B /* LaunchScreen.storyboard in Resources */,
 				3080F67F21894DAA0002C44B /* Assets.xcassets in Resources */,
 				3080F67D21894DA90002C44B /* Main.storyboard in Resources */,
+				304D3E50219C028400B98E00 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
