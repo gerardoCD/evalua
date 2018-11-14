@@ -9,6 +9,7 @@
 import Foundation
 
 class RubricStorage: ObjectStorage<Rubric> {
+    static let shared = RubricStorage()
     init() {
         super.init(filename: "rubrics.json")
     }

@@ -9,6 +9,7 @@
 import Foundation
 
 class ClassroomStorage: ObjectStorage<Classroom> {
+    static let shared = ClassroomStorage()
     init() {
         super.init(filename: "classrooms.json")
     }

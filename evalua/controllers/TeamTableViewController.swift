@@ -10,7 +10,7 @@ import UIKit
 
 class TeamTableViewController: UITableViewController {
     var classroomIndex: Int?
-    var classrooms: ClassroomStorage!
+    let classrooms = ClassroomStorage.shared
 
     lazy var addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAdd(_:)))
 
@@ -23,9 +23,6 @@ class TeamTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         navigationItem.rightBarButtonItem = addButton
-        if let split = splitViewController as? EvaluationSplitViewController {
-            classrooms = split.classrooms
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

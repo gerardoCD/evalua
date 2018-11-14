@@ -28,7 +28,7 @@
         <!--Evaluation-->
         <scene sceneID="MAq-R4-CWc">
             <objects>
-                <splitViewController storyboardIdentifier="EvaluationRoot" id="G58-tI-u7d" customClass="EvaluationSplitViewController" customModule="evalua" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="EvaluationRoot" id="G58-tI-u7d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Evaluation" image="report_card" id="5hj-Zm-RWl"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -164,7 +164,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQ4-yt-RxN">
-                                <rect key="frame" x="156" y="126" width="73" height="30"/>
+                                <rect key="frame" x="156" y="126" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="egZ-I0-1NH"/>
+                                </constraints>
                                 <state key="normal" title="View Repo"/>
                                 <connections>
                                     <action selector="didTapOnRepoUrl:" destination="6ue-xm-VqK" eventType="touchUpInside" id="sBE-XL-QGL"/>

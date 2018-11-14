@@ -10,7 +10,7 @@ import UIKit
 
 class ClassroomViewController: UITableViewController {
     var detailViewController: TeamTableViewController!
-    var classrooms: ClassroomStorage!
+    let classrooms = ClassroomStorage.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +27,11 @@ class ClassroomViewController: UITableViewController {
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAdd(_:)))
         navigationItem.rightBarButtonItem = addButton
-        if let split = splitViewController as? EvaluationSplitViewController {
-            classrooms = split.classrooms
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        classrooms.save()
-        super.viewWillDisappear(animated)
     }
 
     @objc func onTapAdd(_ sender: Any) {
