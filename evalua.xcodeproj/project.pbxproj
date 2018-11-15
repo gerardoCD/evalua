@@ -25,6 +25,8 @@
 		3080F68221894DAA0002C44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3080F68021894DAA0002C44B /* LaunchScreen.storyboard */; };
 		3080F68D21894DAB0002C44B /* evaluaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F68C21894DAB0002C44B /* evaluaTests.swift */; };
 		3080F69821894DAB0002C44B /* evaluaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080F69721894DAB0002C44B /* evaluaUITests.swift */; };
+		308DB4C3219D2FCB0089045B /* EvaluationSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DB4C2219D2FCB0089045B /* EvaluationSplitViewController.swift */; };
+		308DB4C5219D33620089045B /* SettingsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DB4C4219D33620089045B /* SettingsSplitViewController.swift */; };
 		30D94AC3218BD53A0063B3EE /* TeamFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D94AC2218BD53A0063B3EE /* TeamFormViewController.swift */; };
 		30D94AC5218BDB240063B3EE /* ClassroomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D94AC4218BDB240063B3EE /* ClassroomFormViewController.swift */; };
 		30EFED412189575500C9EFC5 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFED402189575500C9EFC5 /* TeamTableViewController.swift */; };
@@ -78,6 +80,8 @@
 		3080F69321894DAB0002C44B /* evaluaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evaluaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3080F69721894DAB0002C44B /* evaluaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evaluaUITests.swift; sourceTree = "<group>"; };
 		3080F69921894DAB0002C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308DB4C2219D2FCB0089045B /* EvaluationSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationSplitViewController.swift; sourceTree = "<group>"; };
+		308DB4C4219D33620089045B /* SettingsSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSplitViewController.swift; sourceTree = "<group>"; };
 		30D94AC2218BD53A0063B3EE /* TeamFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFormViewController.swift; sourceTree = "<group>"; };
 		30D94AC4218BDB240063B3EE /* ClassroomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomFormViewController.swift; sourceTree = "<group>"; };
 		30EFED402189575500C9EFC5 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
@@ -230,9 +234,11 @@
 			isa = PBXGroup;
 			children = (
 				30468A372195540900E0CE83 /* forms */,
+				308DB4C2219D2FCB0089045B /* EvaluationSplitViewController.swift */,
 				3080F67721894DA90002C44B /* ClassroomViewController.swift */,
 				30EFED402189575500C9EFC5 /* TeamTableViewController.swift */,
 				30468A352195520400E0CE83 /* TeamEvaluationViewController.swift */,
+				308DB4C4219D33620089045B /* SettingsSplitViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -504,6 +510,8 @@
 				304689F321950A9B00E0CE83 /* ClassroomStorage.swift in Sources */,
 				30EFED4D21895B9400C9EFC5 /* Rubric.swift in Sources */,
 				304689EB2193D0EB00E0CE83 /* StorageType.swift in Sources */,
+				308DB4C3219D2FCB0089045B /* EvaluationSplitViewController.swift in Sources */,
+				308DB4C5219D33620089045B /* SettingsSplitViewController.swift in Sources */,
 				304689F72195332700E0CE83 /* ObjectStorage.swift in Sources */,
 				304689ED2193D1F100E0CE83 /* ImageStore.swift in Sources */,
 				30EFED4F21895BD800C9EFC5 /* RubricScore.swift in Sources */,

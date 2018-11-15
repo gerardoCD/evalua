@@ -72,7 +72,7 @@
         <!--Settings-->
         <scene sceneID="xoP-WK-BwC">
             <objects>
-                <splitViewController storyboardIdentifier="SettingsRoot" id="879-P9-bm4" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="SettingsRoot" id="879-P9-bm4" customClass="SettingsSplitViewController" customModule="evalua" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="TNn-jZ-xNc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

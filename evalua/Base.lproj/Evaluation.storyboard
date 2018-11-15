@@ -28,7 +28,7 @@
         <!--Evaluation-->
         <scene sceneID="MAq-R4-CWc">
             <objects>
-                <splitViewController storyboardIdentifier="EvaluationRoot" id="G58-tI-u7d" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="EvaluationRoot" id="G58-tI-u7d" customClass="EvaluationSplitViewController" customModule="evalua" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Evaluation" image="report_card" id="5hj-Zm-RWl"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
