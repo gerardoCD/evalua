@@ -33,6 +33,10 @@ struct Team: Codable, Evaluable {
     }
 
     func githubImage(_ completion: @escaping (UIImage) -> Void) {
+        if let img = ImageStore.shared.fetch(forKey: "\(self.github).png") {
+            completion(img)
+            return
+        }
         DispatchQueue.global(qos: .background).async {
             guard let url = URL(string: "\(self.githubUrlString).png"),
                 let data = try? Data(contentsOf: url),
@@ -40,6 +44,7 @@ struct Team: Codable, Evaluable {
             DispatchQueue.main.async {
                 completion(img)
             }
+            ImageStore.shared.save(image: img, forKey: "\(self.github).png")
         }
     }
 }
